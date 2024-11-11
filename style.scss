@@ -1,0 +1,384 @@
+@use 'variables';
+@use 'mixins';
+@use 'fonts';
+
+* {
+    font-family: "Gilroy";
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    width: 99vw;
+    padding: 1rem;
+}
+
+.header {
+    height: 97vh;
+    background-color: variables.$color_beige;
+    @include mixins.flex;
+    border: none;
+    flex-direction: column;
+    
+    .nav {
+        height: 10%;
+        width: 80%;
+        margin: 1rem 0;
+        @include mixins.flex;
+        
+        img {
+            height: 40%;
+            width: auto;
+        }
+    }
+    
+    .nav_menu {
+        @include mixins.flex;
+        width: 40%;
+        
+        li {
+            margin: 0 1rem;
+            color: variables.$color_blue;
+            font-weight: bold;
+        }
+    }
+    
+    .nav_btns {
+        height: 2.5rem;
+        width: 35%;
+        @include mixins.flex;
+    }
+    
+    .nav_search {
+        height: 90%;
+        width: 50%;
+        padding: 0 0 0.5% 9%;
+        border: none;
+        border-radius: 10rem;
+        background-image: url("/assets/icons/search.svg");
+        background-repeat: no-repeat;
+        background-position: 5% 50%;
+        background-size: 9%;
+    }
+    
+    .nav_btn, .content_btn_explo {
+        @include mixins.btn_full;
+    }
+
+    .content_btn_explo {
+        @include mixins.btn_full;
+    }
+    
+    .content_btn_view {
+        @include mixins.btn_empty;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        svg {
+            height: 1.5rem;
+            width: auto;
+            margin: 0 0 0 1rem;
+            border: 0.1rem solid variables.$color_blue;
+            border-radius: 1rem;
+        }
+    }
+        
+    .content {
+        height: 90%;
+        width: 100%;
+        display: flex;
+    }
+    
+    .content_texts {
+        width: 38%;
+        margin: 5%;
+        flex-direction: column;
+    }
+    
+    .content_title {
+        font-size: 4.75rem;
+        color: variables.$color_blue;
+    }
+    
+    .content_subtitle {
+        font-size: 3.5rem;
+        color: variables.$color_blue;
+    }
+    
+    .content_txt {
+        margin: 2rem 0;
+        color: variables.$color_black;
+    }
+    
+    .content_btns {
+        width: 75%;
+        @include mixins.flex;
+        
+        button {
+            height: 3.5rem;
+            width: 13rem;
+            font-size: 1.2rem;
+        }
+    }
+    
+    .content_img {
+        height: 100%;
+        width: 50%;
+        object-fit: cover;
+    }
+}
+
+
+.main {
+    margin: 1rem 5rem;
+    
+    .info {
+        flex-direction: column;
+        display: flex;
+    }
+
+    .info_txt {
+        width: 100%;
+        @include mixins.flex;
+
+        .info_title {
+            margin: 1rem 0;
+            
+            h2 {
+                color: variables.$color_blue;
+            }
+        }
+
+        .info_btn {
+            @include mixins.btn_empty;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            img {
+                padding: 0 1rem;
+            }
+        }
+    }
+    
+    .info_cards {
+        @include mixins.flex;
+        flex-wrap: wrap;
+    }
+    
+    .info_card {
+        max-width: 31.5%;
+        padding: 0.5rem 1rem 1.5rem 0.5rem;
+        margin: 1rem 0.5rem;
+        border-radius: 1rem;
+        box-shadow: 0.1rem 0.1rem 1rem variables.$color_grey;
+        
+        h3, div, h4 {
+            padding: 0.25rem 0;
+        }
+
+        .tag {
+            width: 21%;
+            padding: 0.5rem;
+            margin: 0.5rem 0;
+            border-radius: 2rem;
+            font-size: 0.75rem;
+            background-color: variables.$color_lightBlue;
+            color: variables.$color_white;
+        }
+
+        p {
+            font-size: 1.1rem;
+        }
+
+        .card_title {
+            padding: 0 1rem 0.75rem 0;
+        }
+
+        img {
+            border-radius: 1rem;
+        }
+    }
+    
+    .card_info {
+        display: flex;
+        align-items: center;
+        color: variables.$color_grey;
+        font-size: 0.75rem;
+        
+        .card_info_dot {
+            height: 1rem;
+            width: 1rem;
+            background-image: url("https://shop.finecut.co.uk/cdn/shop/products/8235-Grey.png?v=1624537659");
+            background-position: center;
+            background-size: 0.2rem 0.2rem;
+            background-repeat: no-repeat;
+        }
+    }
+
+    .content_btn_explo {
+        @include mixins.btn_full;
+    }
+
+    .content_btn_view {
+        @include mixins.btn_empty;
+        margin: 0 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        svg {
+            height: 1.5rem;
+            width: auto;
+            margin: 0 0 0 1rem;
+            border: 0.1rem solid variables.$color_blue;
+            border-radius: 1rem;
+        }
+    }
+        
+    .content {
+        width: 100%;
+        display: flex;
+        background-color: variables.$color_beige;
+        border-radius: 1rem;
+        margin: 2rem 0;
+    }
+
+    .content_texts {
+        width: 38%;
+        margin: 5%;
+        text-align: right;
+    }
+
+    .content_title {
+        font-size: 4rem;
+        color: variables.$color_blue;
+    }
+
+    .content_subtitle {
+        font-size: 3rem;
+        color: variables.$color_blue;
+    }
+
+    .content_txt {
+        margin: 2rem 0;
+        font-size: 1.1rem;
+        color: variables.$color_black;
+    }
+
+    .content_btns {
+        width: 100%;
+        display: flex;
+        justify-content: end;
+        
+        button {
+            height: 3.5rem;
+            width: 13rem;
+            font-size: 1.2rem;
+        }
+    }
+
+    .content_img {
+        width: 50%;
+        object-fit: cover;
+    }
+}
+
+.footer {
+    @include mixins.flex;
+    flex-direction: column;
+    padding: 3rem 0 1.25rem 0;
+    margin: 3rem 0 0 0;
+    background-color: variables.$color_beige;
+
+    .register {
+        width: 90%;
+        @include mixins.flex;
+        margin: 1.25rem;
+        padding: 1rem;
+        border-radius: 1rem;
+        background-color: variables.$color_blue;
+        color: variables.$color_white;
+
+
+        h2 {
+            font-size: 2rem;
+            padding: 0.75rem;
+        }
+        
+        .btns {
+            @include mixins.flex;
+            padding: 0.75rem;
+            margin: 0.75rem;
+            width: 80%;
+            border-radius: 1rem;
+            background-color: variables.$color_white;
+
+            input {
+                height: 2.5rem;
+                width: 78%;
+                padding: 0 1rem;
+                border-radius: 0.5rem;
+                border-width: 0.05rem;
+            }
+
+            button {
+                @include mixins.btn_full;
+                width: 20%;
+                border-radius: 0.5rem;
+            }
+        }
+    }
+
+    .menus {
+        @include mixins.flex;
+        width: 90%;
+        margin: 1.25rem 0;
+
+        ul {
+            @include mixins.flex;
+            flex-direction: row;
+        }
+
+        .menu {
+            width: 30%;
+        }
+
+        .social {
+            width: 15%;
+            
+            li img {
+                height: 1.5rem;
+                width: auto;
+            }
+        }
+    }
+
+    .line {
+        height: 0.05rem;
+        width: 90%;
+        margin: 1.25rem 0;
+        background-color: variables.$color_lightGrey;
+    }
+
+    .termes {
+        @include mixins.flex;
+        width: 90%;
+        margin: 1.25rem;
+        font-size: 0.75rem;
+        color: variables.$color_grey;
+
+        img {
+            height: 2.5rem;
+        }
+
+        .txt {
+            @include mixins.flex;
+            width: 15%;
+        }
+    }
+}

@@ -1,0 +1,23 @@
+@use 'variables';
+
+@mixin flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin btn_full {
+    height: 2.5rem;
+    width: 10rem;
+    color: white;
+    background-color: variables.$color_blue;
+    border: 0.2rem solid variables.$color_blue;
+    border-radius: 10rem;
+}
+
+@mixin btn_empty {
+    height: 2.5rem;
+    width: 10rem;
+    border: 0.2rem solid variables.$color_blue;
+    border-radius: 10rem;
+}

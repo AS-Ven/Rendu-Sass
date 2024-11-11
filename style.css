@@ -1,0 +1,409 @@
+@font-face {
+  font-family: "Gilroy";
+  src: url("../assets/fonts/Gilroy/Gilroy-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("../assets/fonts/Gilroy/Gilroy-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("../assets/fonts/Gilroy/Gilroy-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("../assets/fonts/Gilroy/Gilroy-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("../assets/fonts/Gilroy/Gilroy-Heavy.ttf") format("truetype");
+  font-weight: 900;
+  font-display: swap;
+}
+* {
+  font-family: "Gilroy";
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+body {
+  width: 99vw;
+  padding: 1rem;
+}
+
+.header {
+  height: 97vh;
+  background-color: #FCEED5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: none;
+  flex-direction: column;
+}
+.header .nav {
+  height: 10%;
+  width: 80%;
+  margin: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .nav img {
+  height: 40%;
+  width: auto;
+}
+.header .nav_menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 40%;
+}
+.header .nav_menu li {
+  margin: 0 1rem;
+  color: #003459;
+  font-weight: bold;
+}
+.header .nav_btns {
+  height: 2.5rem;
+  width: 35%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .nav_search {
+  height: 90%;
+  width: 50%;
+  padding: 0 0 0.5% 9%;
+  border: none;
+  border-radius: 10rem;
+  background-image: url("/assets/icons/search.svg");
+  background-repeat: no-repeat;
+  background-position: 5% 50%;
+  background-size: 9%;
+}
+.header .nav_btn, .header .content_btn_explo {
+  height: 2.5rem;
+  width: 10rem;
+  color: white;
+  background-color: #003459;
+  border: 0.2rem solid #003459;
+  border-radius: 10rem;
+}
+.header .content_btn_explo {
+  height: 2.5rem;
+  width: 10rem;
+  color: white;
+  background-color: #003459;
+  border: 0.2rem solid #003459;
+  border-radius: 10rem;
+}
+.header .content_btn_view {
+  height: 2.5rem;
+  width: 10rem;
+  border: 0.2rem solid #003459;
+  border-radius: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header .content_btn_view svg {
+  height: 1.5rem;
+  width: auto;
+  margin: 0 0 0 1rem;
+  border: 0.1rem solid #003459;
+  border-radius: 1rem;
+}
+.header .content {
+  height: 90%;
+  width: 100%;
+  display: flex;
+}
+.header .content_texts {
+  width: 38%;
+  margin: 5%;
+  flex-direction: column;
+}
+.header .content_title {
+  font-size: 4.75rem;
+  color: #003459;
+}
+.header .content_subtitle {
+  font-size: 3.5rem;
+  color: #003459;
+}
+.header .content_txt {
+  margin: 2rem 0;
+  color: #242B33;
+}
+.header .content_btns {
+  width: 75%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .content_btns button {
+  height: 3.5rem;
+  width: 13rem;
+  font-size: 1.2rem;
+}
+.header .content_img {
+  height: 100%;
+  width: 50%;
+  object-fit: cover;
+}
+
+.main {
+  margin: 1rem 5rem;
+}
+.main .info {
+  flex-direction: column;
+  display: flex;
+}
+.main .info_txt {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main .info_txt .info_title {
+  margin: 1rem 0;
+}
+.main .info_txt .info_title h2 {
+  color: #003459;
+}
+.main .info_txt .info_btn {
+  height: 2.5rem;
+  width: 10rem;
+  border: 0.2rem solid #003459;
+  border-radius: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main .info_txt .info_btn img {
+  padding: 0 1rem;
+}
+.main .info_cards {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.main .info_card {
+  max-width: 31.5%;
+  padding: 0.5rem 1rem 1.5rem 0.5rem;
+  margin: 1rem 0.5rem;
+  border-radius: 1rem;
+  box-shadow: 0.1rem 0.1rem 1rem #667479;
+}
+.main .info_card h3, .main .info_card div, .main .info_card h4 {
+  padding: 0.25rem 0;
+}
+.main .info_card .tag {
+  width: 21%;
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+  border-radius: 2rem;
+  font-size: 0.75rem;
+  background-color: #00A7E7;
+  color: #ffffff;
+}
+.main .info_card p {
+  font-size: 1.1rem;
+}
+.main .info_card .card_title {
+  padding: 0 1rem 0.75rem 0;
+}
+.main .info_card img {
+  border-radius: 1rem;
+}
+.main .card_info {
+  display: flex;
+  align-items: center;
+  color: #667479;
+  font-size: 0.75rem;
+}
+.main .card_info .card_info_dot {
+  height: 1rem;
+  width: 1rem;
+  background-image: url("https://shop.finecut.co.uk/cdn/shop/products/8235-Grey.png?v=1624537659");
+  background-position: center;
+  background-size: 0.2rem 0.2rem;
+  background-repeat: no-repeat;
+}
+.main .content_btn_explo {
+  height: 2.5rem;
+  width: 10rem;
+  color: white;
+  background-color: #003459;
+  border: 0.2rem solid #003459;
+  border-radius: 10rem;
+}
+.main .content_btn_view {
+  height: 2.5rem;
+  width: 10rem;
+  border: 0.2rem solid #003459;
+  border-radius: 10rem;
+  margin: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main .content_btn_view svg {
+  height: 1.5rem;
+  width: auto;
+  margin: 0 0 0 1rem;
+  border: 0.1rem solid #003459;
+  border-radius: 1rem;
+}
+.main .content {
+  width: 100%;
+  display: flex;
+  background-color: #FCEED5;
+  border-radius: 1rem;
+  margin: 2rem 0;
+}
+.main .content_texts {
+  width: 38%;
+  margin: 5%;
+  text-align: right;
+}
+.main .content_title {
+  font-size: 4rem;
+  color: #003459;
+}
+.main .content_subtitle {
+  font-size: 3rem;
+  color: #003459;
+}
+.main .content_txt {
+  margin: 2rem 0;
+  font-size: 1.1rem;
+  color: #242B33;
+}
+.main .content_btns {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+.main .content_btns button {
+  height: 3.5rem;
+  width: 13rem;
+  font-size: 1.2rem;
+}
+.main .content_img {
+  width: 50%;
+  object-fit: cover;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  padding: 3rem 0 1.25rem 0;
+  margin: 3rem 0 0 0;
+  background-color: #FCEED5;
+}
+.footer .register {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1.25rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: #003459;
+  color: #ffffff;
+}
+.footer .register h2 {
+  font-size: 2rem;
+  padding: 0.75rem;
+}
+.footer .register .btns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem;
+  margin: 0.75rem;
+  width: 80%;
+  border-radius: 1rem;
+  background-color: #ffffff;
+}
+.footer .register .btns input {
+  height: 2.5rem;
+  width: 78%;
+  padding: 0 1rem;
+  border-radius: 0.5rem;
+  border-width: 0.05rem;
+}
+.footer .register .btns button {
+  height: 2.5rem;
+  width: 10rem;
+  color: white;
+  background-color: #003459;
+  border: 0.2rem solid #003459;
+  border-radius: 10rem;
+  width: 20%;
+  border-radius: 0.5rem;
+}
+.footer .menus {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: 1.25rem 0;
+}
+.footer .menus ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+.footer .menus .menu {
+  width: 30%;
+}
+.footer .menus .social {
+  width: 15%;
+}
+.footer .menus .social li img {
+  height: 1.5rem;
+  width: auto;
+}
+.footer .line {
+  height: 0.05rem;
+  width: 90%;
+  margin: 1.25rem 0;
+  background-color: #CCD1D2;
+}
+.footer .termes {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: 1.25rem;
+  font-size: 0.75rem;
+  color: #667479;
+}
+.footer .termes img {
+  height: 2.5rem;
+}
+.footer .termes .txt {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 15%;
+}
+
+/*# sourceMappingURL=style.css.map */
